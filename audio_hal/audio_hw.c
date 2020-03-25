@@ -7740,7 +7740,7 @@ ssize_t hw_write (struct audio_stream_out *stream
 #ifdef ADD_AUDIO_DELAY_INTERFACE
         ret = aml_audio_delay_process(AML_DELAY_OUTPORT_ALL, (void *) tmp_buffer, bytes, output_format);
         if (ret < 0) {
-            //ALOGW("aml_audio_delay_process skip, ret:%#x", ret);
+            ALOGW("aml_audio_delay_process skip, ret:%#zx", ret);
         }
 #endif
         if (adjust_ms) {
